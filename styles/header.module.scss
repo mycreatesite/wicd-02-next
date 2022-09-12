@@ -1,0 +1,21 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: var(--font-en);
+    font-size: 12px;
+    padding: 24px 0 8px;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.navList {
+    display: flex;
+    column-gap: 1.5rem;
+}

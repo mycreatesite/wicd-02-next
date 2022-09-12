@@ -1,0 +1,11 @@
+.mainvisual {
+  padding-top: 56px;
+  padding-bottom: 51px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  > h1 {
+    font-family: var(--font-en);
+  }
+}
