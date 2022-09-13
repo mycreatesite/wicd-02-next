@@ -3,18 +3,30 @@
     width: 100%;
     bottom: 0;
     left: 0;
+    z-index: var(--header-and-footer);
 }
 
 .nav {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 8px 0;
-    border-top: 1px solid var(--gray-light);
     font-family: var(--font-en);
     @media (min-width: 768px) {
         flex-direction: row;
         justify-content: space-between;
         padding: 8px 0 24px;
+    }
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color :var(--gray-light);
+        transform-origin: 100% 0;
+        transform: scaleX(0);
     }
     > p {
         font-size: 10px;
@@ -24,13 +36,14 @@
         order: -1;
         font-size: 12px;
         text-align: center;
-        padding-top: 8px;
-        padding-bottom: 8px;
+        margin-top: 8px;
+        margin-bottom: 8px;
         @media (min-width: 768px) {
             order: 1;
-            padding-top: 0;
-            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 0;
         }
     }
 
 }
+

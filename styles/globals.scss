@@ -4,12 +4,13 @@
   --gray: #8C8C8C;
   --gray-light: #D8D8D8;
   --black: #151515;
+  --blue-green: #4bc9c7;
   
   /* typography */
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&family=Poppins:wght@500;600&display=swap');
   --font-base: 'Noto Sans JP', sans-serif;
   --font-en: 'Poppins', sans-serif;
-  --display-title-font-size: clamp(4rem, 3.2857rem + 3.5714vw, 6.5rem);
+  --display-title-font-size: clamp(4rem, 3rem + 5vw, 7.5rem);
   --display-outline-font-size: clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem);
   --letter-spacing: .04em;
 
@@ -17,8 +18,19 @@
   --space-xlarge: clamp(5rem, 4.2857rem + 3.5714vw, 7.5rem);
   --space-large: clamp(4rem, 3.7143rem + 1.4286vw, 5rem);
 
-  /* breakpoint */
+  /* breakpoint (for memo)*/
   --breakpoint-pc: 768px;
+
+  /* global z-index */
+  --header-and-footer: 10;
+
+  /* transition */
+  --easing: cubic-bezier(0.87, 0, 0.13, 1);
+  --duration: .3s;
+}
+
+html {
+  font-size: .875rem;
 }
 
 html,
@@ -44,4 +56,71 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+/* component */
+
+.d-none-pc {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 16px 8px;
+  border-radius: 100px;
+  border: 1px solid currentColor;
+  text-align: center;
+  overflow: hidden;
+  transition-duration: var(--duration);
+  transition-property: color, border, letter-spacing;
+  @media (min-width: 768px) {
+    min-width: 200px;
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: var(--white);
+    transform-origin: 0 0;
+    transform: scaleY(0);
+    transition: transform var(--easing) var(--duration);
+  }
+  &:hover {
+    color: var(--black)!important;
+    border: 1px solid var(--white);
+    letter-spacing: .08em;
+    &::before {
+      transform-origin: 0 100%;
+      transform: scaleY(1);
+    }
+  }
+}
+
+.hover-text-translation {
+  display: block;
+  overflow: hidden;
+  > span {
+      position: relative;
+      display: inline-block;
+      transition: transform var(--duration) var(--easing);
+      &::after {
+          position: absolute;
+          content: attr(data-text);
+          display: block;
+          bottom: 0;
+          left: 0;
+          transform: translateY(100%);
+      }
+  }
+  &:hover {
+      > span {
+          transform: translateY(-100%);
+      }
+  }
 }

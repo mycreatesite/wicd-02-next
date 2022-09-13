@@ -4,7 +4,7 @@ import styles from 'styles/header.module.scss'
 import Container from 'components/container'
 const Header = () => {
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} header`}>
       <Container>
         <nav className={styles.nav}>
           <div className={styles.logo}>
@@ -15,17 +15,17 @@ const Header = () => {
           <ul className={styles.navList}>
             <li className={styles.listItem}>
               <Link href="/">
-                <a>TOP</a>
+                <a className={'hover-text-translation'}><span data-text="TOP">TOP</span></a>
               </Link>
             </li>
             <li className={styles.listItem}>
-              <Link href="/DESIGN">
-                <a>DESIGN</a>
+              <Link href="/design">
+                <a className={'hover-text-translation'}><span data-text="DESIGN">DESIGN</span></a>
               </Link>
             </li>
             <li className={styles.listItem}>
-              <Link href="/FRONTEND">
-                <a>FRONTEND</a>
+              <Link href="/frontend">
+                <a className={'hover-text-translation'}><span data-text="FRONTEND">FRONTEND</span></a>
               </Link>
             </li>
           </ul>
