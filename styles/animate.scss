@@ -35,7 +35,7 @@
   > * {
     display: block;
     transform-origin: 0 0;
-    animation: text-reveal 1.2s var(--easing) both;
+    animation: text-reveal 1.6s var(--easing) both;
   }
 }
 
@@ -43,7 +43,14 @@
 
 body {
   opacity: 0;
-  animation: fade-in 1.2s var(--easing) both;
+  animation: fade-in 1.2s var(--easing) forwards;
+}
+
+article {
+  &::before, &::after {
+    opacity: 0;
+    animation: fade-in 3s 1s var(--easing) forwards;
+  }
 }
 
 .is-animate {
@@ -69,13 +76,13 @@ body {
       .outline {
         > p {
           > * {
-            animation-delay: 1.4s;
+            animation-delay: 1.6s;
           }
         }
       }
       .btnGroup {
         > * {
-          animation-delay: 1.4s;
+          animation-delay: 1.6s;
         }
       }
     }
