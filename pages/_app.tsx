@@ -1,7 +1,7 @@
 import 'modern-css-reset/dist/reset.min.css'
 import 'styles/globals.scss'
 import 'styles/animate.scss'
-import util from "pages/utility/utility"
+import util from "components/utility/utility"
 import type { AppProps } from 'next/app'
 import Layout from 'components/layout'
 import { useEffect } from 'react'

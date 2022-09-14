@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import util from "pages/utility/utility"
+import util from "components/utility/utility"
 import styles from 'styles/Under.module.scss'
 import { motion } from "framer-motion";
 

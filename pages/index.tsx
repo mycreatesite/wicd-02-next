@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import util from "pages/utility/utility"
+import util from "components/utility/utility"
 import styles from 'styles/Top.module.scss'
 import Link from 'next/link'
 import { motion } from "framer-motion";
