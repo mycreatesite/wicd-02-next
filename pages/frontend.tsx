@@ -14,11 +14,8 @@ const Frontend: NextPage = () => {
         opacity: 1,
         y: 0
       }}
-      exit={{
-        opacity: 0,
-      }}
       transition={{
-        ease: "easeInOut",
+        ease: util.pageTransBezier,
         duration: util.pageTransDuration
       }}
     >

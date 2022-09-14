@@ -14,11 +14,8 @@ const Top: NextPage = () => {
       animate={{
         opacity: 1
       }}
-      exit={{
-        opacity: 0
-      }}
       transition={{
-        ease: "easeInOut",
+        ease: util.pageTransBezier,
         duration: util.pageTransDuration
       }}
     >
