@@ -9,7 +9,7 @@ const Header = () => {
         <nav className={styles.nav}>
           <div className={styles.logo}>
             <Link href="/">
-                <a><Image src="/logo.svg" alt="WHAT I CAN DO" width={72} height={18} /></a>
+                <a><Image priority src="/logo.svg" alt="WHAT I CAN DO" width={72} height={18} /></a>
             </Link>
           </div>
           <ul className={styles.navList}>

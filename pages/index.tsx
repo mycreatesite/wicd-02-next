@@ -1,34 +1,52 @@
 import type { NextPage } from 'next'
+import util from "pages/utility/utility"
 import styles from 'styles/Top.module.scss'
 import Link from 'next/link'
-import React, { useEffect } from "react";
-
-if (typeof window !== "undefined") {
-  window.addEventListener("load", () => {
-    document.body.classList.add('is-animate')
-  });
-}
+import { motion } from "framer-motion";
 
 const Top: NextPage = () => {
+
   return (
-      <div className={styles.mainvisual}>
+    <motion.div
+      initial={{
+        opacity: 0
+      }}
+      animate={{
+        opacity: 1
+      }}
+      exit={{
+        opacity: 0
+      }}
+      transition={{
+        ease: "easeInOut",
+        duration: util.pageTransDuration
+      }}
+    >
+      <div className={`${styles.mainvisual} mainvisual`}>
         <div className={styles.bgVideo}>
           <video id={'video'} src="video.mp4" loop autoPlay playsInline muted></video>
         </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>WHAT <br className={'d-none-pc'}/>I CAN <br className={'d-none-pc'}/>DO.</h1>
-          <p className={styles.outline}>My name is Masayoshi Kawashima,<br />as known as ma-ya&apos;s CREATE.</p>
-          <div className={styles.btnGroup}>
+        <div className={`${styles.content} content`}>
+          <h1 className={`${styles.title} title`}>
+            <div className='anim-show-from-bottom'><span>WHAT </span></div>
+            <div className='anim-show-from-bottom'><span>I CAN </span></div>
+            <div className='anim-show-from-bottom'><span>DO.</span></div>
+          </h1>
+          <div className={`${styles.outline} outline`}>
+            <p className='anim-show-from-bottom'><span>My name is Masayoshi Kawashima,</span></p>
+            <p className='anim-show-from-bottom'><span>as known as ma-ya&apos;s CREATE.</span></p>
+          </div>
+          <div className={`${styles.btnGroup} btnGroup anim-show-from-bottom`}>
             <Link href="/design">
-              <a className={'btn-outline'}>DESIGN</a>
+              <a className='btn-outline anim-show-from-bottom'>DESIGN</a>
             </Link>
             <Link href="/frontend">
-              <a className={'btn-outline'}>FRONTEND</a>
+              <a className='btn-outline'>FRONTEND</a>
             </Link>
           </div>
         </div>
       </div>
-      
+    </motion.div>
   )
 }
 

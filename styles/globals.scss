@@ -15,7 +15,7 @@
   --letter-spacing: .04em;
 
   /* space */
-  --space-xlarge: clamp(5rem, 4.2857rem + 3.5714vw, 7.5rem);
+  --space-xlarge: clamp(10rem, 9.2857rem + 3.5714vw, 12.5rem);
   --space-large: clamp(4rem, 3.7143rem + 1.4286vw, 5rem);
 
   /* breakpoint (for memo)*/
@@ -25,7 +25,7 @@
   --header-and-footer: 10;
 
   /* transition */
-  --easing: cubic-bezier(0.87, 0, 0.13, 1);
+  --easing: cubic-bezier(0.85, 0, 0.15, 1);
   --duration: .3s;
 }
 
@@ -60,12 +60,6 @@ ul {
 
 /* component */
 
-.d-none-pc {
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
 .btn-outline {
   display: inline-block;
   padding: 16px 8px;
@@ -92,35 +86,14 @@ ul {
     transition: transform var(--easing) var(--duration);
   }
   &:hover {
-    color: var(--black)!important;
-    border: 1px solid var(--white);
-    letter-spacing: .08em;
-    &::before {
-      transform-origin: 0 100%;
-      transform: scaleY(1);
+    @media (min-width: 768px) {
+      color: var(--black)!important;
+      border: 1px solid var(--white);
+      letter-spacing: .12em;
+      &::before {
+        transform-origin: 0 100%;
+        transform: scaleY(1);
+      }
     }
-  }
-}
-
-.hover-text-translation {
-  display: block;
-  overflow: hidden;
-  > span {
-      position: relative;
-      display: inline-block;
-      transition: transform var(--duration) var(--easing);
-      &::after {
-          position: absolute;
-          content: attr(data-text);
-          display: block;
-          bottom: 0;
-          left: 0;
-          transform: translateY(100%);
-      }
-  }
-  &:hover {
-      > span {
-          transform: translateY(-100%);
-      }
   }
 }

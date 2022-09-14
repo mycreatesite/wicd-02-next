@@ -44,6 +44,12 @@
     letter-spacing: 0;
     line-height: 1.04;
     color: var(--white);
+    @media (min-width: 768px) {
+      display: flex;
+      > div {
+        margin-right: .25em;
+      }
+    }
   }
   .outline {
     font-size: var(--display-outline-font-size);
@@ -63,12 +69,13 @@
     @media (min-width: 768px) {
       margin-top: 2rem;
     }
-    a {
+    > a {
       position: relative;
       flex: 1 0 0%;
       color: var(--white);
+      cursor: pointer;
       @media (min-width: 768px) {
-        flex: 0 0 0%;
+        flex: 0 0 auto;
       }
     }
   }

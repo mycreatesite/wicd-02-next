@@ -1,0 +1,117 @@
+/* transition init*/
+
+.hover-text-translation {
+  display: block;
+  overflow: hidden;
+  > span {
+      position: relative;
+      display: inline-block;
+      transition-property: transform, color;
+      transition-duration: var(--duration);
+      transition-timing-function: var(--easing);
+      &::after {
+          position: absolute;
+          content: attr(data-text);
+          display: block;
+          bottom: 0;
+          left: 0;
+          transform: translateY(100%);
+      }
+  }
+  &:hover {
+    @media (min-width: 768px) {
+      > span {
+        transform: translateY(-100%);
+        color: var(--blue-green);
+      }
+    }
+  }
+}
+
+/* animation init */
+
+.anim-show-from-bottom {
+  overflow: hidden;
+  > * {
+    display: block;
+    transform-origin: 0 0;
+    animation: text-reveal 1.2s var(--easing) both;
+  }
+}
+
+/* animation indivisual */
+
+.is-animate {
+  animation: fade-in 1.2s var(--easing) both; 
+  #video {
+    animation: fade-in-blur 3.2s 1.2s var(--easing) both; 
+  }
+  .header, .footer {
+    nav {
+      &::after {
+         animation: line-scale 1s .6s var(--easing) both; 
+      }
+    }
+  }
+  .mainvisual {
+    .content {
+      .title {
+        > div {
+          > * {
+            animation-delay: 1.2s;
+          }
+        }
+      }
+      .outline {
+        > p {
+          > * {
+            animation-delay: 1.4s;
+          }
+        }
+      }
+      .btnGroup {
+        > * {
+          animation-delay: 1.4s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-blur {
+  0% {
+    opacity: 0;
+    filter: blur(100px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes line-scale {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(100%);
+    }
+}
+
+@keyframes text-reveal {
+  0% {
+    transform: translateY(200%) skewY(10deg) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0) skewY(0) rotate(0);
+  }
+}
