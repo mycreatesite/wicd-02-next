@@ -41,8 +41,12 @@
 
 /* animation indivisual */
 
+body {
+  opacity: 0;
+  animation: fade-in 1.2s var(--easing) both;
+}
+
 .is-animate {
-  animation: fade-in 1.2s var(--easing) both; 
   #video {
     animation: fade-in-blur 3.2s 1.2s var(--easing) both; 
   }
