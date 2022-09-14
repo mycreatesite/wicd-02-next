@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import util from "components/utility/utility"
 import styles from 'styles/Under.module.scss'
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
+import { NextSeo } from 'next-seo'
 
 const Design: NextPage = () => {
   return (
@@ -19,6 +20,13 @@ const Design: NextPage = () => {
         duration: util.pageTransDuration
       }}
     >
+      <NextSeo
+        title="DESIGN | WHAT I CAN DO."
+        openGraph={{
+          url: "https://wicd-02-next.vercel.app/design",
+          title: "DESIGN | WHAT I CAN DO."
+        }}
+      />
       <article className={styles.article}>
         <div className={styles.pageTitleSticky}>
           <p>DESIGN</p>
