@@ -32,7 +32,7 @@ const Design: NextPage = () => {
           <p>DESIGN</p>
         </div>
         <section className={styles.section}>
-          <h1 className={`${styles.title} anim-show-from-bottom`}>
+          <h1 className={`${styles.title} anim-show-from-bottom js-lax`}>
             <span>WEB </span>
             <span>DESIGN</span>
           </h1>
@@ -55,7 +55,7 @@ const Design: NextPage = () => {
         </section>
 
         <section className={styles.section}>
-          <h1 className={`${styles.title} anim-show-from-bottom`}>
+          <h1 className={`${styles.title} anim-show-from-bottom js-lax`}>
             <span>EDITORIAL</span>
           </h1>
           <p className={styles.outline}>ロゴ・チラシ・フライヤー・パッケージからCDジャケット・オリジナルグッズデザイン等の印刷物デザインが可能です。<br />制作物によりますが、ご希望により印刷業者への入稿まで対応しています。<br />ロゴに関してはフリーでお仕事を頂き始めた当初、ロゴコンペ【採用】ランキングにて、2017年04月第3週：第1位 / 2017年04月月間：第7位を獲得しました。<br />ほか変わったものとしては、ウォールアート制作などの経験があります。</p>

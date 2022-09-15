@@ -53,6 +53,10 @@ article {
   }
 }
 
+.js-lax {
+  transition: transform 1s;
+}
+
 .is-animate {
   #video {
     animation: fade-in-blur 3.2s 1.6s var(--easing) both; 

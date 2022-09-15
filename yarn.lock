@@ -1288,6 +1288,16 @@ language-tags@^1.0.5:
   dependencies:
     language-subtag-registry "~0.3.2"
 
+lax.js@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/lax.js/-/lax.js-2.0.3.tgz#74aed57a628db42fcfa91b7a746cec443a611a38"
+  integrity sha512-q2q0jVRwruvFdQZeeE3OwIszRIkey6CItPmB+BcTUFPgHd2R8LI+bntAI7d2GJEjheu79mzQ++MROkODuZoXlA==
+
+lax.ts@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/lax.ts/-/lax.ts-2.0.3.tgz#ca975698db53e9221c3108e094eb1f6b4cf248e9"
+  integrity sha512-M2zsUwAwk+lY8RY8xyAb0KvgcS9muwM3F7Av8ebb/l73TVXAhVXFOpJGcddWkAl1xIkLKS50gU02E5Banq1a4Q==
+
 levn@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/levn/-/levn-0.4.1.tgz#ae4562c007473b932a6200d403268dd2fffc6ade"

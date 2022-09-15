@@ -32,7 +32,7 @@ const Frontend: NextPage = () => {
           <p>FRONTEND</p>
         </div>
         <section className={styles.section}>
-          <h1 className={`${styles.title} anim-show-from-bottom`}>
+          <h1 className={`${styles.title} anim-show-from-bottom js-lax`}>
             <span>HTML5 / CSS3</span>
           </h1>
           <p className={styles.outline}>WEBサイトのデザイン→コーディングまでをワンストップで行います。<br />HTML5によるHTML構造はSEOの根本を担う部分と考えているため、セマンティックな構造を意識しています。<br />またCSS3で豊かになったアニメーションを駆使して様々な表現を試みることが好きで、CodePenやブログ発信で日々アウトプットを行っています。<br />CSSは主にSass（SCSS）、PostCSS、HTML記述はPugなども用います。</p>
@@ -52,7 +52,7 @@ const Frontend: NextPage = () => {
         </section>
 
         <section className={styles.section}>
-          <h1 className={`${styles.title} anim-show-from-bottom`}>
+          <h1 className={`${styles.title} anim-show-from-bottom js-lax`}>
             <span>JavaScript</span>
           </h1>
           <p className={styles.outline}>サイト上のインタラクション / UI実装にJavaScriptを使用しています。<br />プラグインを使用することもありますが、基本的には自身のコードで実現できるよう努めています。<br />使用経験のあるフレームワーク・ライブラリにはjQuery、Vue.js、Nuxt.js、Next.js、Gatsby.jsなどが挙げられます。</p>
@@ -74,7 +74,7 @@ const Frontend: NextPage = () => {
         </section>
 
         <section className={styles.section}>
-          <h1 className={`${styles.title} anim-show-from-bottom`}>
+          <h1 className={`${styles.title} anim-show-from-bottom js-lax`}>
             <span>PHP-WordPress</span>
           </h1>
           <p className={styles.outline}>WordPressは既存テーマのカスタマイズはもちろん、PHPによる独自テーマの制作経験があります。<br />ポートフォリオメインサイトをオリジナルテーマ化し、それを用いてクライアント様のサイトをXAMPP仮想環境にて制作しました。</p>
@@ -91,7 +91,7 @@ const Frontend: NextPage = () => {
         </section>
 
         <section className={styles.section}>
-          <h1 className={`${styles.title} anim-show-from-bottom`}>
+          <h1 className={`${styles.title} anim-show-from-bottom js-lax`}>
             <span>Environment</span>
           </h1>
           <p className={styles.outline}>ソースコード管理はGit / GitHub にて管理しております。<br />CodePenはコンポーネントレベルのテスト環境としてよく利用しており、その後の実装やブログでの発信に役立てています。<br />メインPCはWindows、サブとしてMacを所有しています。</p>

@@ -6,6 +6,7 @@ import Layout from 'components/layout'
 import { useEffect } from 'react'
 import { AnimatePresence } from "framer-motion"
 import Seo from 'components/seo';
+const Lax = require('lax.js')
 
 if (typeof window !== "undefined") {
 
@@ -24,6 +25,26 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       document.body.classList.remove('is-animate')
     }
   },[router.pathname])
+
+  //lax.js
+  useEffect(() => {
+    if(router.pathname === '/') return;
+    Lax.init();
+    Lax.addDriver("scrollY", () => {
+      return window.scrollY;
+    });
+    Lax.addElements(
+      ".js-lax",
+      {
+        scrollY: {
+          translateY: [
+            ['elInY', 'elOutY'],
+            [0, -50]
+          ],
+        }
+      }
+    );
+  }, [router.pathname]);
 
   return (
     <>

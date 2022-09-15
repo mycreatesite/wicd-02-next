@@ -42,6 +42,7 @@
 .section {
   padding-top: var(--space-xlarge);
   padding-bottom: var(--space-xlarge);
+  overflow-x: hidden;
   > * + * {
     margin-top: var(--space-large);
   }

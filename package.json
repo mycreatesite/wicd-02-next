@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "framer-motion": "^7.3.5",
+    "lax.js": "^2.0.3",
+    "lax.ts": "^2.0.3",
     "modern-css-reset": "^1.4.0",
     "next": "12.3.0",
     "next-seo": "^5.5.0",
