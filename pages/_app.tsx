@@ -6,29 +6,60 @@ import Layout from 'components/layout'
 import { useEffect } from 'react'
 import { AnimatePresence } from "framer-motion"
 import Seo from 'components/seo';
-const Lax = require('lax.js')
 import Script from 'next/script'
+const Lax = require('lax.js')
 
+// global scripts
 if (typeof window !== "undefined") {
-
   //初回ロード時にbodyにis-animateを付与
   window.addEventListener("load", () => {
     document.body.classList.add('is-animate')
   });
-
 }
 
 function MyApp({ Component, pageProps, router }: AppProps) {
 
+  /* ------- effects ------- */
+
   //ページ遷移時にis-animateを削除
-  useEffect(()=>{
+  useEffect(removeIsAnimate,[router.pathname])
+  //lax.js
+  useEffect(lax, [router.pathname]);
+
+  /* ------- elements ------- */
+
+  return (
+    <>
+      <Script
+        async src="https://www.googletagmanager.com/gtag/js?id=G-ED8LWB7L7Y"
+      />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-ED8LWB7L7Y');
+        `}
+      </Script>
+      <Seo />
+      <AnimatePresence>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </AnimatePresence>
+    </>
+  )
+
+  /* ------- functions ------- */
+
+  function removeIsAnimate () {
     return ()=>{
       document.body.classList.remove('is-animate')
     }
-  },[router.pathname])
+  }
 
-  //lax.js
-  useEffect(() => {
+  function lax () {
     if(router.pathname === '/') return;
     Lax.init();
     Lax.addDriver("scrollY", () => {
@@ -67,30 +98,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         }
       }
     );
-  }, [router.pathname]);
-
-  return (
-    <>
-      <Script
-        async src="https://www.googletagmanager.com/gtag/js?id=G-ED8LWB7L7Y"
-      />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-ED8LWB7L7Y');
-        `}
-      </Script>
-      <Seo />
-      <AnimatePresence>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </AnimatePresence>
-    </>
-  )
+  }
 }
 
 export default MyApp
