@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://wicd-02-next.vercel.app/
+
+# Sitemaps
+Sitemap: https://wicd-02-next.vercel.app/sitemap.xml
