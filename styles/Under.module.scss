@@ -40,8 +40,6 @@
 }
 
 .section {
-  position: relative;
-  z-index: -1;
   padding-top: var(--space-xlarge);
   padding-bottom: var(--space-xlarge);
   > * + * {

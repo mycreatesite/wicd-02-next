@@ -29,6 +29,11 @@
   --duration: .3s;
 }
 
+::selection {
+  color: var(--black);
+  background-color: var(--blue-green);
+}
+
 html {
   font-size: .875rem;
 }
