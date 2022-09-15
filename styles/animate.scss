@@ -66,7 +66,8 @@ article {
     display: block;
     transition: transform 2s;
     img {
-      animation: fade-in-blur-light 3.2s var(--easing) both;
+      animation: fade-in-image 3.2s var(--easing) both;
+      transform-origin: 0 0;
     }
   }
 }
@@ -127,13 +128,15 @@ article {
   }
 }
 
-@keyframes fade-in-blur-light {
+@keyframes fade-in-image {
   0% {
     opacity: 0;
-    filter: blur(300px);
+    transform: scale(2);
+    filter: blur(30px);
   }
   100% {
     opacity: .1;
+    transform: scale(1);
     filter: blur(0);
   }
 }
