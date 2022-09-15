@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import util from "components/utility/utility"
 import styles from 'styles/Under.module.scss'
+import Image from 'next/image'
 import { motion } from "framer-motion"
 import { NextSeo } from 'next-seo'
 
@@ -80,6 +81,22 @@ const Design: NextPage = () => {
             <li>名刺</li>
           </ul>
         </section>
+        <div className={`${styles.image01} js-laxImg01`}>
+          <Image
+            src="/design01.jpg"
+            alt=""
+            width={500}
+            height={600}
+          />
+        </div>
+        <div className={`${styles.image02} js-laxImg02`}>
+          <Image
+            src="/design02.jpg"
+            alt=""
+            width={400}
+            height={300}
+          />
+        </div>
       </article>
     </motion.div>
   )

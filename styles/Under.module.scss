@@ -94,3 +94,18 @@
     }
   }
 }
+
+
+.image01,.image02 {
+  position: fixed;
+  z-index: -1;
+  background-color: var(--black);
+}
+.image01 {
+  right: -2%;
+  bottom: 15%;
+}
+.image02 {
+  right: 15%;
+  bottom: 0%;
+}

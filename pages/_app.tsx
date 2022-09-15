@@ -44,6 +44,28 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         }
       }
     );
+    Lax.addElements(
+      ".js-laxImg01",
+      {
+        scrollY: {
+          translateY: [
+            [0, 'pageHeight'],
+            [0, -500]
+          ],
+        }
+      }
+    );
+    Lax.addElements(
+      ".js-laxImg02",
+      {
+        scrollY: {
+          translateY: [
+            [0, 'pageHeight'],
+            [0, -200]
+          ],
+        }
+      }
+    );
   }, [router.pathname]);
 
   return (

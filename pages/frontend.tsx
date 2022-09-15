@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import util from "components/utility/utility"
 import styles from 'styles/Under.module.scss'
+import Image from 'next/image'
 import { motion } from "framer-motion"
 import { NextSeo } from 'next-seo'
 
@@ -109,6 +110,22 @@ const Frontend: NextPage = () => {
             <li>webpack</li>
           </ul>
         </section>
+        <div className={`${styles.image01} js-laxImg01`}>
+          <Image
+            src="/frontend01.jpg"
+            alt=""
+            width={600}
+            height={500}
+          />
+        </div>
+        <div className={`${styles.image02} js-laxImg02`}>
+          <Image
+            src="/frontend02.jpg"
+            alt=""
+            width={400}
+            height={300}
+          />
+        </div>
       </article>
     </motion.div>
   )

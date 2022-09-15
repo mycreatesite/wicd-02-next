@@ -60,6 +60,17 @@ article {
   }
 }
 
+.js-laxImg01, .js-laxImg02 {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+    transition: transform 2s;
+    img {
+      animation: fade-in-blur-light 3.2s var(--easing) both;
+    }
+  }
+}
+
 .is-animate {
   #video {
     animation: fade-in-blur 3.2s 1.6s var(--easing) both; 
@@ -112,6 +123,17 @@ article {
   }
   100% {
     opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes fade-in-blur-light {
+  0% {
+    opacity: 0;
+    filter: blur(300px);
+  }
+  100% {
+    opacity: .05;
     filter: blur(0);
   }
 }
