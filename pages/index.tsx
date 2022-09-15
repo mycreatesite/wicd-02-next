@@ -27,7 +27,7 @@ const Top: NextPage = () => {
           <h1 className={`${styles.title} title`}>
             <div className='anim-show-from-bottom'><span>WHAT </span></div>
             <div className='anim-show-from-bottom'><span>I CAN </span></div>
-            <div className='anim-show-from-bottom'><span>DO.</span></div>
+            <div className='anim-show-from-bottom'><span className='color-blue-green'>DO.</span></div>
           </h1>
           <div className={`${styles.outline} outline`}>
             <p className='anim-show-from-bottom'><span>My name is Masayoshi Kawashima,</span></p>
