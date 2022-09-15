@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import { AnimatePresence } from "framer-motion"
 import Seo from 'components/seo';
 const Lax = require('lax.js')
+import Script from 'next/script'
 
 if (typeof window !== "undefined") {
 
@@ -70,6 +71,18 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   return (
     <>
+      <Script
+        async src="https://www.googletagmanager.com/gtag/js?id=G-ED8LWB7L7Y"
+      />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-ED8LWB7L7Y');
+        `}
+      </Script>
       <Seo />
       <AnimatePresence>
         <Layout>
