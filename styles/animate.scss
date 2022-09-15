@@ -54,7 +54,10 @@ article {
 }
 
 .js-lax {
-  transition: transform 1s;
+  transition: transform .5s;
+  @media (min-width: 768px) {
+    transition: transform 1s;
+  }
 }
 
 .is-animate {
