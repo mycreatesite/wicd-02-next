@@ -87,6 +87,7 @@ const Design: NextPage = () => {
             alt=""
             width={500}
             height={600}
+            priority
           />
         </div>
         <div className={`${styles.image02} js-laxImg02`}>
@@ -95,6 +96,7 @@ const Design: NextPage = () => {
             alt=""
             width={400}
             height={300}
+            priority
           />
         </div>
       </article>

@@ -12,19 +12,19 @@
   &::before {
     top: 0;
     height: 110px;
-    background: linear-gradient(180deg, rgba(21,21,21,1) 0%, rgba(21,21,21,1) 50%, rgba(21,21,21,0) 100%);
+    background: linear-gradient(180deg, var(--color-base-alpha1) 0%, var(--color-base-alpha1) 50%, var(--color-base-alpha0) 100%);
     @media (min-width: 768px) {
       height: 210px;
-      background: linear-gradient(180deg, rgba(21,21,21,1) 0%, rgba(21,21,21,1) 25%, rgba(21,21,21,0) 100%);
+      background: linear-gradient(180deg, var(--color-base-alpha1) 0%, var(--color-base-alpha1) 25%, var(--color-base-alpha0) 100%);
     }
   }
   &::after {
     bottom: 0;
     height: 130px;
-    background: linear-gradient(180deg, rgba(21,21,21,0) 0%, rgba(21,21,21,1) 50%, rgba(21,21,21,1) 100%);
+    background: linear-gradient(180deg, var(--color-base-alpha0) 0%, var(--color-base-alpha1) 50%, var(--color-base-alpha1) 100%);
     @media (min-width: 768px) {
       height: 260px;
-      background: linear-gradient(180deg, rgba(21,21,21,0) 0%, rgba(21,21,21,1) 75%, rgba(21,21,21,1) 100%);
+      background: linear-gradient(180deg, var(--color-base-alpha0) 0%, var(--color-base-alpha1) 75%, var(--color-base-alpha1) 100%);
     }
   }
 }
@@ -54,11 +54,6 @@
     font-size: var(--display-title-font-size);
     line-height: 1.04;
     overflow-wrap: break-word;
-    // > span {
-    //   &:first-child::first-letter {
-    //     color: var(--blue-green);
-    //   }
-    // }
   }
   .outline {
     line-height: 2.5;
@@ -72,7 +67,7 @@
         transition-property: color, border;
         &:hover {
           @media (min-width: 768px) {
-            color: var(--blue-green);
+            color: var(--color-accent);
           }
         }
       }
@@ -86,11 +81,11 @@
     flex-wrap: wrap;
     gap: 8px;
     > li {
-      color: var(--gray);
+      color: var(--color-gray);
     }
     > li:not(:last-child) {
       padding-right: 8px;
-      border-right: 1px solid var(--gray);
+      border-right: 1px solid var(--color-gray);
     }
   }
 }
@@ -99,7 +94,7 @@
 .image01,.image02 {
   position: fixed;
   z-index: -1;
-  background-color: var(--black);
+  background-color: var(--color-base);
 }
 .image01 {
   right: -2%;
@@ -108,5 +103,5 @@
 .image02 {
   right: 17%;
   bottom: 0%;
-  box-shadow: 0 0 80px 10px var(--black);
+  box-shadow: 0 0 80px 10px var(--color-base);
 }

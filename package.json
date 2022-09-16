@@ -10,6 +10,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.5",
     "framer-motion": "^7.3.5",
     "lax.js": "^2.0.3",
     "lax.ts": "^2.0.3",

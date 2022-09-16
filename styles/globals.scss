@@ -1,17 +1,26 @@
 :root {
   /* color */
-  --white: #fff;
-  --gray: #8C8C8C;
-  --gray-light: #D8D8D8;
-  --black: #151515;
-  --blue-green: #4bc9c7;
+  --color-text: #D8D8D8;
+  --color-text-light: #fff;
+  --color-base: #151515;
+  --color-base-alpha1: rgba(21,21,21,1);
+  --color-base-alpha0: rgba(21,21,21,0);
+  --color-accent: #4bc9c7;
+  --color-gray: #8C8C8C;
+  .is-lightTheme {
+    --color-text: #151515;
+    --color-text-light: #000;
+    --color-base: #D8D8D8;
+    --color-base-alpha1: rgba(216, 216, 216,1);
+    --color-base-alpha0: rgba(216, 216, 216,0);
+  }
   
   /* typography */
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&family=Poppins:wght@500;600&display=swap');
   --font-base: 'Noto Sans JP', sans-serif;
   --font-en: 'Poppins', sans-serif;
-  --display-title-font-size: clamp(4rem, 2.7143rem + 6.4286vw, 8.5rem);
-  --display-outline-font-size: clamp(1.5rem, 0.9286rem + 2.8571vw, 3.5rem);
+  --display-title-font-size: clamp(4rem, 3rem + 5vw, 7.5rem);
+  --display-outline-font-size: clamp(1.5rem, 1.0714rem + 2.1429vw, 3rem);
   --letter-spacing: .04em;
 
   /* space */
@@ -30,12 +39,8 @@
 }
 
 ::selection {
-  color: var(--black);
-  background-color: var(--blue-green);
-}
-
-html {
-  font-size: .875rem;
+  color: var(--color-base);
+  background-color: var(--color-accent);
 }
 
 html,
@@ -43,9 +48,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-base);
-  background-color: var(--black);
-  color: var(--gray-light);
+  background-color: var(--color-base);
+  color: var(--color-text);
   letter-spacing: var(--letter-spacing);
+}
+
+body {
+  font-size: .875rem;
 }
 
 a {
@@ -63,10 +72,18 @@ ul {
   margin: 0;
 }
 
+.is-lightTheme {
+  .logoSvg {
+    > path:not(.logoAccent) {
+      fill: #000;
+    }
+  }
+}
+
 /* component */
 
 .color-blue-green {
-  color: var(--blue-green);
+  color: var(--color-accent);
 }
 
 .btn-outline {
@@ -89,15 +106,15 @@ ul {
     top: 0;
     left: 0;
     z-index: -1;
-    background: var(--white);
+    background: var(--color-text-light);
     transform-origin: 0 0;
     transform: scaleY(0);
     transition: transform var(--easing) var(--duration);
   }
   &:hover {
     @media (min-width: 768px) {
-      color: var(--black)!important;
-      border: 1px solid var(--white);
+      color: var(--color-base)!important;
+      border: 1px solid var(--color-text-light);
       letter-spacing: .12em;
       &::before {
         transform-origin: 0 100%;

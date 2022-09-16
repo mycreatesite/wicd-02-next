@@ -2,6 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from 'styles/header.module.scss'
 import Container from 'components/container'
+import Logo from 'components/logoSvg'
+import ModeNightOutlinedIcon from '@mui/icons-material/ModeNightOutlined'
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined'
 const Header = () => {
   return (
     <header className={`${styles.header} header`}>
@@ -9,7 +12,7 @@ const Header = () => {
         <nav className={styles.nav}>
           <div className={styles.logo}>
             <Link href="/">
-                <a><Image priority src="/logo.svg" alt="WHAT I CAN DO" width={72} height={18} /></a>
+                <a><Logo /></a>
             </Link>
           </div>
           <ul className={styles.navList}>
@@ -30,6 +33,14 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        <div className={styles.themeToggle}>
+          <ModeNightOutlinedIcon />
+          <div className={styles.toggleBtn}>
+            <input id="toggle" className={styles.toggleInput} type='checkbox' />
+            <label htmlFor="toggle" className={styles.toggleLabel}/>
+          </div>
+          <LightModeOutlinedIcon />
+        </div>
       </Container>
     </header>
   )

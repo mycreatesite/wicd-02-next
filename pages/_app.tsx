@@ -23,8 +23,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   //ページ遷移時にis-animateを削除
   useEffect(removeIsAnimate,[router.pathname])
+  //テーマ切替
+  useEffect(toggleColorTheme,[router.pathname])
   //lax.js
   useEffect(lax, [router.pathname]);
+  
 
   /* ------- elements ------- */
 
@@ -57,6 +60,17 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     return ()=>{
       document.body.classList.remove('is-animate')
     }
+  }
+
+  function toggleColorTheme () {
+    const checkBtn = document.getElementById('toggle') as HTMLInputElement
+    checkBtn?.addEventListener('change', ()=>{
+      if(checkBtn.checked) {
+        document.body.classList.add('is-lightTheme')
+      } else {
+        document.body.classList.remove('is-lightTheme')
+      }
+    })
   }
 
   function lax () {
