@@ -91,7 +91,7 @@
 }
 
 
-.image01,.image02 {
+.image01,.image02,.image03  {
   position: fixed;
   z-index: -1;
   background-color: var(--color-base);
@@ -104,4 +104,10 @@
   right: 17%;
   bottom: 0%;
   box-shadow: 0 0 80px 10px var(--color-base);
+}
+.image03 {
+  left: 2%;
+  top: 0%;
+  box-shadow: 0 0 80px 10px var(--color-base);
+  opacity: .5;
 }

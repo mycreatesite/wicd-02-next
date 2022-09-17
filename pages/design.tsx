@@ -99,6 +99,15 @@ const Design: NextPage = () => {
             priority
           />
         </div>
+        <div className={`${styles.image03} js-laxImg03`}>
+          <Image
+            src="/design03.jpg"
+            alt=""
+            width={500}
+            height={300}
+            priority
+          />
+        </div>
       </article>
     </motion.div>
   )

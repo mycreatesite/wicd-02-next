@@ -128,6 +128,15 @@ const Frontend: NextPage = () => {
             priority
           />
         </div>
+        <div className={`${styles.image03} js-laxImg03`}>
+          <Image
+            src="/frontend03.jpg"
+            alt=""
+            width={400}
+            height={400}
+            priority
+          />
+        </div>
       </article>
     </motion.div>
   )

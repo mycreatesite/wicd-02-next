@@ -72,6 +72,18 @@ article {
   }
 }
 
+.js-laxImg03 {
+  display: none;
+  @media (min-width: 1200px) {
+    display: block;
+    transition: transform 2s;
+    img {
+      animation: fade-in-image 3.2s .5s var(--easing) both;
+      transform-origin: 0 0;
+    }
+  }
+}
+
 .is-animate {
   #video {
     animation: fade-in-blur 3.2s 1.6s var(--easing) both; 

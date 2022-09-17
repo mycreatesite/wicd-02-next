@@ -112,6 +112,17 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         }
       }
     );
+    Lax.addElements(
+      ".js-laxImg03",
+      {
+        scrollY: {
+          translateY: [
+            [0, 'pageHeight'],
+            [0, 200]
+          ],
+        }
+      }
+    );
   }
 }
 
