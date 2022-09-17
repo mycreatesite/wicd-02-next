@@ -27,20 +27,31 @@
         background-color :var(--color-text);
         transform-origin: 100% 0;
     }
-    > p {
+    .copy {
         font-size: 10px;
         text-align: center;
     }
-    > a {
+    .link {
         order: -1;
         font-size: 12px;
         text-align: center;
         margin-top: 8px;
         margin-bottom: 8px;
+        > svg {
+            display: inline;
+            width: auto;
+            height: 14px;
+            vertical-align: -2px;
+        }
         @media (min-width: 768px) {
             order: 1;
             margin-top: 0;
             margin-bottom: 0;
+        }
+        &:hover {
+            > svg {
+                fill: var(--color-accent);
+            }
         }
     }
 
