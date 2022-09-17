@@ -9,6 +9,8 @@ export default function Document() {
         />
         <link rel="icon" href="favicon.ico"/>
         <link rel="apple-touch-icon" href="touchicon.png"/>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#151515" />
       </Head>
       <body>
         <Main />
