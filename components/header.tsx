@@ -37,7 +37,7 @@ const Header = () => {
           <ModeNightOutlinedIcon />
           <div className={styles.toggleBtn}>
             <input id="toggle" className={styles.toggleInput} type='checkbox' />
-            <label htmlFor="toggle" className={styles.toggleLabel}/>
+            <label htmlFor="toggle" className={styles.toggleLabel} aria-label="toggle color theme"/>
           </div>
           <LightModeOutlinedIcon />
         </div>
