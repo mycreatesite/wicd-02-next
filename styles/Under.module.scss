@@ -114,8 +114,9 @@
   box-shadow: 0 0 80px 10px var(--color-base);
 }
 .image03 {
-  right: 35%;
-  top: 15%;
+  z-index: -2;
+  right: 30%;
+  top: 0%;
   box-shadow: 0 0 80px 10px var(--color-base);
   > span {
     opacity: .5!important;
