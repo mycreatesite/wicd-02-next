@@ -105,7 +105,7 @@
   background-color: var(--color-base);
 }
 .image01 {
-  right: -2%;
+  right: 0;
   bottom: 15%;
 }
 .image02 {
@@ -114,8 +114,11 @@
   box-shadow: 0 0 80px 10px var(--color-base);
 }
 .image03 {
-  left: 2%;
-  top: 0%;
+  right: 35%;
+  top: 15%;
   box-shadow: 0 0 80px 10px var(--color-base);
-  opacity: .5;
+  > span {
+    opacity: .5!important;
+    display: block!important;
+  }
 }
