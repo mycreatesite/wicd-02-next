@@ -6,6 +6,8 @@ import { motion } from "framer-motion"
 import { NextSeo } from 'next-seo'
 
 const Design: NextPage = () => {
+  let sectionCount = 0
+
   return (
     <motion.div
       initial={{
@@ -30,13 +32,14 @@ const Design: NextPage = () => {
       />
       <article className={styles.article}>
         <div className={styles.pageTitleSticky}>
-          <p>DESIGN</p>
+          <h1>DESIGN</h1>
         </div>
         <section className={styles.section}>
-          <h1 className={`${styles.title} anim-show-from-bottom js-lax`}>
+          <p className={styles.count}>{( '00' + ++sectionCount ).slice( -2 )}.</p>
+          <h2 className={`${styles.title} anim-show-from-bottom js-lax`}>
             <span>WEB </span>
             <span>DESIGN</span>
-          </h1>
+          </h2>
           <p className={styles.outline}>バナー類全般やサイト・LPデザインの経験があります。<br />WEBバナー系の制作において、ECサイト訴求画像ではその多くが amazon / yahoo / 楽天 で売上1位を達成しています。<br />同様に、サイト・LPデザインも好評を頂いています。</p>
           <ul className={styles.listCase}>
             <li><a href="https://myscreate.com/gallery/websites-3/" target="_blank" rel="noopener noreferrer">WEBサイト「Charlotte is Mine – official website」</a></li>
@@ -56,9 +59,10 @@ const Design: NextPage = () => {
         </section>
 
         <section className={styles.section}>
-          <h1 className={`${styles.title} anim-show-from-bottom js-lax`}>
+          <p className={styles.count}>{( '00' + ++sectionCount ).slice( -2 )}.</p>
+          <h2 className={`${styles.title} anim-show-from-bottom js-lax`}>
             <span>EDITORIAL</span>
-          </h1>
+          </h2>
           <p className={styles.outline}>ロゴ・チラシ・フライヤー・パッケージからCDジャケット・オリジナルグッズデザイン等の印刷物デザインが可能です。<br />制作物によりますが、ご希望により印刷業者への入稿まで対応しています。<br />ロゴに関してはフリーでお仕事を頂き始めた当初、ロゴコンペ【採用】ランキングにて、2017年04月第3週：第1位 / 2017年04月月間：第7位を獲得しました。<br />ほか変わったものとしては、ウォールアート制作などの経験があります。</p>
           <ul className={styles.listCase}>
             <li><a href="https://myscreate.com/gallery/printed-matter/" target="_blank" rel="noopener noreferrer">商品パッケージ「ELECTIVE CHARGER」</a></li>
