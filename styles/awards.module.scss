@@ -1,0 +1,13 @@
+.awards {
+    display: none;
+    @media (min-width: 768px) {
+        display: block;
+        position: fixed;
+        z-index: 999; 
+        transform: translateY(-50%) scale(0.5);
+        transform-origin: right;
+        top: 50%; 
+        right: 0;
+        transform: translateY(-50%) scale(1);
+    }
+}

@@ -3,6 +3,7 @@ import 'styles/globals.scss'
 import 'styles/animate.scss'
 import type { AppProps } from 'next/app'
 import Layout from 'components/layout'
+import Awards from 'components/awards'
 import { useEffect } from 'react'
 import { AnimatePresence } from "framer-motion"
 import Seo from 'components/seo';
@@ -51,6 +52,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           <Component {...pageProps} />
         </Layout>
       </AnimatePresence>
+      <Awards />
     </>
   )
 
