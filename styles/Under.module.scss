@@ -1,5 +1,9 @@
 .article {
   padding-top: 56px;
+  padding-bottom: 64px;
+  @media (min-width: 768px) {
+    padding-bottom: 51px;
+  }
   &::before, &::after {
     position: fixed;
     z-index: 1;

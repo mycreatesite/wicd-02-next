@@ -1,11 +1,14 @@
 .mainvisual {
-  padding-top: 56px;
-  padding-bottom: 51px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: var(--font-en);
+  padding-top: 56px;
+  padding-bottom: 64px;
+  @media (min-width: 768px) {
+    padding-bottom: 51px;
+  }
 }
 
 .bgVideo {
