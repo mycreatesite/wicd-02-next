@@ -98,7 +98,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         scrollY: {
           translateY: [
             [0, 'pageHeight'],
-            [0, -500]
+            [0, -600]
           ],
         }
       }
@@ -109,7 +109,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         scrollY: {
           translateY: [
             [0, 'pageHeight'],
-            [0, -200]
+            [0, -300]
           ],
         }
       }
@@ -120,7 +120,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         scrollY: {
           translateY: [
             [0, 'pageHeight'],
-            [0, 200]
+            [0, 300]
           ],
         }
       }
