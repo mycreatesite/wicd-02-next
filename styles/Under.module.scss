@@ -3,6 +3,8 @@
   padding-bottom: 64px;
   @media (min-width: 768px) {
     padding-bottom: 51px;
+    position: relative;
+    z-index: 0;
   }
   &::before, &::after {
     position: fixed;

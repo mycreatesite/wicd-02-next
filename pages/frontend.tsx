@@ -62,8 +62,9 @@ const Frontend: NextPage = () => {
           </h2>
           <p className={styles.outline}>サイト上のインタラクション / UI実装にJavaScriptを使用しています。<br />プラグインを使用することもありますが、基本的には自身のコードで実現できるよう努めています。<br />使用経験のあるフレームワーク・ライブラリにはjQuery、Vue.js、Nuxt.js、Next.js、Gatsby.jsなどが挙げられます。</p>
           <ul className={styles.listCase}>
-            <li><a href="https://myscreate.com/" target="_blank" rel="noopener noreferrer">ポートフォリオメインサイト</a></li>
             <li><a href="/" target="_blank" rel="noopener noreferrer">ポートフォリオサブサイト（Next.js、当サイト）</a></li>
+            <li><a href="https://myscreate.com/gallery/hoppydays/" target="_blank" rel="noopener noreferrer">WEBサイト「HOPPY DAYS」（Next.js）</a></li>
+            <li><a href="https://myscreate.com/gallery/tamtam-maker/" target="_blank" rel="noopener noreferrer">Figmaプラグイン「TAMTAM MAKER」</a></li>
             <li><a href="https://codepen.io/mycreatesite/pen/OrZVem" target="_blank" rel="noopener noreferrer">jQueryプラグイン「TextyleFLIP.js」</a></li>
           </ul>
           <ul className={styles.listTag}>

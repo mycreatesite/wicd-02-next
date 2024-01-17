@@ -40,8 +40,9 @@ const Design: NextPage = () => {
             <span>WEB </span>
             <span>DESIGN</span>
           </h2>
-          <p className={styles.outline}>バナー類全般やサイト・LPデザインの経験があります。<br />WEBバナー系の制作において、ECサイト訴求画像ではその多くが amazon / yahoo / 楽天 で売上1位を達成しています。<br />同様に、サイト・LPデザインも好評を頂いています。</p>
+          <p className={styles.outline}>バナー類全般やサイト・LPデザインの経験があります。<br />WEBバナー系の制作において、ECサイト訴求画像ではその多くが amazon / yahoo / 楽天 で売上1位を達成しています。<br />同様に、サイト・LPデザインも好評を頂いており、評価サイト「Awwwards」「CSS Design Awards」での入賞実績もあります。</p>
           <ul className={styles.listCase}>
+            <li><a href="https://myscreate.com/gallery/hoppydays/" target="_blank" rel="noopener noreferrer">WEBサイト「HOPPY DAYS」</a></li>
             <li><a href="https://myscreate.com/gallery/websites-3/" target="_blank" rel="noopener noreferrer">WEBサイト「Charlotte is Mine – official website」</a></li>
             <li><a href="https://myscreate.com/gallery/websites-5/" target="_blank" rel="noopener noreferrer">LP「IN SOMEWHERE NIGHTS」- Charlotte is Mine</a></li>
             <li><a href="https://myscreate.com/gallery/graphics-2/" target="_blank" rel="noopener noreferrer">EC訴求画像「GACHILOCK」</a></li>
@@ -108,7 +109,7 @@ const Design: NextPage = () => {
             src="/design03.jpg"
             alt=""
             width={500}
-            height={300}
+            height={375}
             priority
           />
         </div>
